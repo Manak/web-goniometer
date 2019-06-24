@@ -1,0 +1,276 @@
+.wallpaper {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  transition: opacity 400ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0.8; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.time-container {
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  min-height: 200px;
+  position: relative; }
+  .time-container .time {
+    z-index: inherit;
+    font-size: 11em;
+    font-weight: 300;
+    color: white;
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.4); }
+  .time-container .show-alarm {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: -20px;
+    color: white;
+    opacity: 1; }
+
+.spotify-container-container-container {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px; }
+  .spotify-container-container-container .spotify-container-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 10px;
+    height: 200px;
+    color: white;
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; }
+    .spotify-container-container-container .spotify-container-container .touch-container {
+      min-width: 60%;
+      width: fit-content;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; }
+      .spotify-container-container-container .spotify-container-container .touch-container .spotify-container {
+        display: flex;
+        flex-direction: row;
+        width: fit-content; }
+        .spotify-container-container-container .spotify-container-container .touch-container .spotify-container .image-container {
+          width: 110px;
+          height: 110px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative; }
+          .spotify-container-container-container .spotify-container-container .touch-container .spotify-container .image-container .rc-progress-circle {
+            width: 110px;
+            z-index: 1;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%); }
+          .spotify-container-container-container .spotify-container-container .touch-container .spotify-container .image-container img {
+            border-radius: 50%;
+            width: 100px;
+            z-index: 2;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%); }
+        .spotify-container-container-container .spotify-container-container .touch-container .spotify-container .info-container {
+          width: fit-content;
+          white-space: nowrap;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 15px; }
+          .spotify-container-container-container .spotify-container-container .touch-container .spotify-container .info-container .title {
+            font-size: 1.5em;
+            width: fit-content;
+            white-space: nowrap;
+            font-weight: 400; }
+          .spotify-container-container-container .spotify-container-container .touch-container .spotify-container .info-container .artist {
+            font-size: 1em;
+            opacity: 0.8;
+            font-weight: 300; }
+  .spotify-container-container-container.top {
+    height: 100%; }
+    .spotify-container-container-container.top .spotify-container-container {
+      bottom: unset;
+      top: 30px;
+      align-items: flex-start;
+      background: transparent !important;
+      padding-bottom: unset; }
+      .spotify-container-container-container.top .spotify-container-container .touch-container {
+        align-items: flex-start; }
+        .spotify-container-container-container.top .spotify-container-container .touch-container .spotify-container .info-container .title {
+          font-size: 1.8em; }
+        .spotify-container-container-container.top .spotify-container-container .touch-container .spotify-container .info-container .artist {
+          font-size: 1.3em; }
+
+.volume-touch-container-container {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 10%; }
+  .volume-touch-container-container .volume-touch-container {
+    height: 100%;
+    width: 100%; }
+
+.ticker {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  margin-top: -20px;
+  font-weight: 300;
+  min-height: 30px;
+  max-height: 30px;
+  z-index: 1; }
+  .ticker .content {
+    transition: opacity 300ms;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .ticker .weather-icon {
+    width: 25px;
+    padding-right: 10px; }
+  .ticker.large-text .content {
+    font-size: 1.6em; }
+
+.news-ticker {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  font-weight: 300;
+  width: 240px;
+  z-index: 1;
+  padding-right: 10px; }
+  .news-ticker .content {
+    transition: opacity 300ms;
+    font-size: 1em; }
+    .news-ticker .content .source {
+      padding-top: 5px;
+      font-size: 0.8em;
+      opacity: 0.8;
+      text-align: right; }
+  .news-ticker .weather-icon {
+    width: 25px;
+    padding-right: 10px; }
+
+.news-viewer-container-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2; }
+  .news-viewer-container-container .news-viewer-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .news-viewer-container-container .news-viewer-container .iframe {
+      width: 80%;
+      height: 80%;
+      background: white;
+      -webkit-overflow-scrolling: touch;
+      overflow-y: scroll; }
+      .news-viewer-container-container .news-viewer-container .iframe iframe {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none; }
+
+.weather-container-container {
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  align-items: flex-end; }
+  .weather-container-container .weather-container {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(7%, rgba(0, 0, 0, 0.07)), color-stop(100%, black));
+    padding: 40px 0; }
+    .weather-container-container .weather-container .forecast {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 40px;
+      opacity: 0.6; }
+    .weather-container-container .weather-container .weather {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 100px;
+      height: 100px; }
+      .weather-container-container .weather-container .weather .temperature {
+        font-size: 1em;
+        text-align: center; }
+      .weather-container-container .weather-container .weather .time {
+        font-size: 1em;
+        text-align: center; }
+      .weather-container-container .weather-container .weather .condition-icon {
+        width: 60px; }
+        .weather-container-container .weather-container .weather .condition-icon img {
+          width: 60px; }
+    .weather-container-container .weather-container .now .weather {
+      height: 130px; }
+      .weather-container-container .weather-container .now .weather .temperature {
+        font-size: 1.3em; }
+      .weather-container-container .weather-container .now .weather .condition-icon {
+        width: 80px;
+        padding-top: 10px; }
+        .weather-container-container .weather-container .now .weather .condition-icon img {
+          width: 80px; }
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: black;
+  -webkit-user-select: none;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+
+/*# sourceMappingURL=main.css.map*/
