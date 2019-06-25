@@ -42,15 +42,15 @@ window.onload = () => {
         }
         if(state == 2){
             logs.push({
-                xRotation:xRotation,
-                yRotation:yRotation,
-                zRotation:zRotation,
-                lastX: lastX,
-                lastY:lastY,
-                lastZ:lastZ,
-                xZero: xZero,
-                yZero: yZero,
-                zZero: zZero,  
+                xRotation:xRotation.toFixed(4),
+                yRotation:yRotation.toFixed(4),
+                zRotation:zRotation.toFixed(4),
+                lastX: lastX.toFixed(4),
+                lastY:lastY.toFixed(4),
+                lastZ:lastZ.toFixed(4),
+                xZero: xZero.toFixed(4),
+                yZero: yZero.toFixed(4),
+                zZero: zZero.toFixed(4),  
             });
             lastX = xRotation+0;
             lastY = yRotation+0;
@@ -101,6 +101,15 @@ window.onload = () => {
                     </td>
                     <td>
                         ${curr.zRotation}
+                    </td>
+                    <td>
+                        ${curr.xZero}
+                    </td>
+                    <td>
+                        ${curr.yZero}
+                    </td>
+                    <td>
+                        ${curr.zZero}
                     </td>
                 `;
                 table.appendChild(row);
