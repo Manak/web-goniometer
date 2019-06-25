@@ -2,8 +2,12 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  background: #eee;
-  color: black; }
+  color: black;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #eee; }
 
 .touch-sensitive {
   width: 100%;
@@ -36,6 +40,9 @@ body, html {
       display: inline-block; }
   .content .state-3 {
     display: none; }
+    .content .state-3 .log table td {
+      min-width: 100px;
+      text-align: center; }
 
 
 /*# sourceMappingURL=main.css.map*/

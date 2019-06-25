@@ -24,10 +24,11 @@ let state = 1;
 
 window.onload = () => {
 
-    let xDOM = document.getElementById('x');
-    let yDOM = document.getElementById('y');
-    let zDOM = document.getElementById('z');
-
+    const xDOM = document.getElementById('x');
+    const yDOM = document.getElementById('y');
+    const zDOM = document.getElementById('z');
+    const tableHeader = document.getElementById('table-header');
+    const table = tableHeader.parentNode;
     const touchRegion = document.getElementsByClassName('touch-sensitive')[0];
     touchRegion.addEventListener('tap', () => {
         if(state == 1){
@@ -37,15 +38,16 @@ window.onload = () => {
             yZero = yRotation+0;
             zZero = zRotation+0;
             changeState(2);
+            return;
         }
         if(state == 2){
             lastX = xRotation+0;
             lastY = yRotation+0;
             lastZ = zRotation+0;
             logs.push({
-                x:xRotation,
-                y:yRotation,
-                z:zRotation,
+                xRotation:xRotation,
+                yRotation:yRotation,
+                zRotation:zRotation,
                 lastX: lastX,
                 lastY:lastY,
                 lastZ:lastZ,
@@ -53,13 +55,56 @@ window.onload = () => {
                 yZero: yZero,
                 zZero: zZero,  
             });
+            document.body.style.background = "#bfff8e";
+            setTimeout(() => {
+                document.body.style.background="#eee";
+            },400);
+            return;
         }
     });
     
     touchRegion.addEventListener('dbltap',() => {
-        if(state == 1){
-            state = 2;
+        if(state == 2){
+            state = 3;
             changeState(3);
+            touchRegion.style.display = "none";
+            for(var i =0; i< logs.length-2; i++){
+                let row = document.createElement('tr');
+                let curr = logs[i];
+                row.innerHTML = `
+                    <td>
+                        ${i+1}
+                    </td>
+                    <td>
+                        ${curr.xRotation - curr.xZero}
+                    </td>
+                    <td>
+                        ${curr.yRotation - curr.yZero}
+                    </td>
+                    <td>
+                        ${curr.zRotation - curr.zZero}
+                    </td>
+                    <td>
+                        ${curr.lastX-curr.xRotation}
+                    </td>
+                    <td>
+                        ${curr.lastY-curr.yRotation}
+                    </td>
+                    <td>
+                        ${curr.lastZ-curr.zRotation}
+                    </td>
+                    <td>
+                        ${curr.xRotation}
+                    </td>
+                    <td>
+                        ${curr.yRotation}
+                    </td>
+                    <td>
+                        ${curr.zRotation}
+                    </td>
+                `;
+                table.appendChild(row);
+            }
         }
     });
     
