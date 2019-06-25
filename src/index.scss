@@ -47,6 +47,12 @@ body{
         display:none;
         .log{
             table{
+                #table-header{
+                    font-weight:800;
+                }
+                tr{
+                    font-weight:300;
+                }
                 td{
                     min-width:100px;
                     text-align:center;

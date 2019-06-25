@@ -68,7 +68,7 @@ window.onload = () => {
             state = 3;
             changeState(3);
             touchRegion.style.display = "none";
-            for(var i =0; i< logs.length-2; i++){
+            for(var i =0; i< logs.length-1; i++){
                 let row = document.createElement('tr');
                 let curr = logs[i];
                 row.innerHTML = `
@@ -85,13 +85,13 @@ window.onload = () => {
                         ${curr.zRotation - curr.zZero}
                     </td>
                     <td>
-                        ${curr.lastX-curr.xRotation}
+                        ${i!=0?curr.lastX-curr.xRotation:"N/A"}
                     </td>
                     <td>
-                        ${curr.lastY-curr.yRotation}
+                        ${i!=0?curr.lastY-curr.yRotation:"N/A"}
                     </td>
                     <td>
-                        ${curr.lastZ-curr.zRotation}
+                        ${i!=0?curr.lastZ-curr.zRotation:"N/A"}
                     </td>
                     <td>
                         ${curr.xRotation}

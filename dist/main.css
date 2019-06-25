@@ -40,6 +40,10 @@ body {
       display: inline-block; }
   .content .state-3 {
     display: none; }
+    .content .state-3 .log table #table-header {
+      font-weight: 800; }
+    .content .state-3 .log table tr {
+      font-weight: 300; }
     .content .state-3 .log table td {
       min-width: 100px;
       text-align: center; }
