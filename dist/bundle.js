@@ -494,7 +494,6 @@ window.onload = () => {
         xDOM.innerText = `${(xRotation - xZero).toFixed(2)} ${lastX != -361 ? `(${(lastX-xRotation).toFixed(0)})`:``}`;
         yDOM.innerText = `${(yRotation - yZero).toFixed(2)} ${lastY != -361 ? `(${(lastY-yRotation).toFixed(0)})`:``}`;
         zDOM.innerText = `${(zRotation - zZero).toFixed(2)} ${lastZ != -361 ? `(${(lastZ-zRotation).toFixed(0)})`:``}`;
-        console.log(xRotation, yRotation, zRotation);
     });
 
 }
