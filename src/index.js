@@ -42,15 +42,15 @@ window.onload = () => {
         }
         if(state == 2){
             logs.push({
-                xRotation:xRotation.toFixed(4),
-                yRotation:yRotation.toFixed(4),
-                zRotation:zRotation.toFixed(4),
-                lastX: lastX.toFixed(4),
-                lastY:lastY.toFixed(4),
-                lastZ:lastZ.toFixed(4),
-                xZero: xZero.toFixed(4),
-                yZero: yZero.toFixed(4),
-                zZero: zZero.toFixed(4),  
+                xRotation:xRotation,
+                yRotation:yRotation,
+                zRotation:zRotation,
+                lastX: lastX,
+                lastY:lastY,
+                lastZ:lastZ,
+                xZero: xZero,
+                yZero: yZero,
+                zZero: zZero,  
             });
             lastX = xRotation+0;
             lastY = yRotation+0;
@@ -76,40 +76,40 @@ window.onload = () => {
                         ${i+1}
                     </td>
                     <td>
-                        ${curr.xRotation - curr.xZero}
+                        ${(curr.xRotation - curr.xZero).toFixed(6)}
                     </td>
                     <td>
-                        ${curr.yRotation - curr.yZero}
+                        ${(curr.yRotation - curr.yZero).toFixed(6)}
                     </td>
                     <td>
-                        ${curr.zRotation - curr.zZero}
+                        ${(curr.zRotation - curr.zZero).toFixed(6)}
                     </td>
                     <td>
-                        ${i!=0?curr.lastX-curr.xRotation:"N/A"}
+                        ${i!=0?(curr.lastX-curr.xRotation).toFixed(6):"N/A"}
                     </td>
                     <td>
-                        ${i!=0?curr.lastY-curr.yRotation:"N/A"}
+                        ${i!=0?(curr.lastY-curr.yRotation).toFixed(6):"N/A"}
                     </td>
                     <td>
-                        ${i!=0?curr.lastZ-curr.zRotation:"N/A"}
+                        ${i!=0?(curr.lastZ-curr.zRotation).toFixed(6):"N/A"}
                     </td>
                     <td>
-                        ${curr.xRotation}
+                        ${(curr.xRotation).toFixed(6)}
                     </td>
                     <td>
-                        ${curr.yRotation}
+                        ${(curr.yRotation).toFixed(6)}
                     </td>
                     <td>
-                        ${curr.zRotation}
+                        ${(curr.zRotation).toFixed(6)}
                     </td>
                     <td>
-                        ${curr.xZero}
+                        ${(curr.xZero).toFixed(6)}
                     </td>
                     <td>
-                        ${curr.yZero}
+                        ${(curr.yZero).toFixed(6)}
                     </td>
                     <td>
-                        ${curr.zZero}
+                        ${(curr.zZero).toFixed(6)}
                     </td>
                 `;
                 table.appendChild(row);
