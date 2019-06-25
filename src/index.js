@@ -85,13 +85,13 @@ window.onload = () => {
                         ${(curr.zRotation - curr.zZero).toFixed(6)}
                     </td>
                     <td>
-                        ${i!=0?(curr.lastX-curr.xRotation).toFixed(6):"N/A"}
+                        ${i!=0?(curr.lastX-curr.xRotation).toFixed(6):(curr.xZero-curr.xRotation).toFixed(6)}
                     </td>
                     <td>
-                        ${i!=0?(curr.lastY-curr.yRotation).toFixed(6):"N/A"}
+                        ${i!=0?(curr.lastY-curr.yRotation).toFixed(6):(curr.yZero-curr.yRotation).toFixed(6)}
                     </td>
                     <td>
-                        ${i!=0?(curr.lastZ-curr.zRotation).toFixed(6):"N/A"}
+                        ${i!=0?(curr.lastZ-curr.zRotation).toFixed(6):(curr.zZero-curr.zRotation).toFixed(6)}
                     </td>
                     <td>
                         ${(curr.xRotation).toFixed(6)}
