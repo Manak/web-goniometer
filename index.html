@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no"/>
-    <title>Project Parrot</title>
+    <title>Web Goniometer</title>
     <link rel="stylesheet" href="./dist/main.css" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,800" rel="stylesheet">
@@ -15,7 +15,34 @@
 
 <body>
     <!-- Main -->
-    <div id="drop-zone"></div>
+    <div class="touch-sensitive">
+        
+    </div>
+    <div class="content">
+        <div class="state-1" id="state-1">
+            <div class="message">
+                Tap to begin
+            </div>
+        </div>
+        <div class="state-2" id="state-2">
+            <div class="measurements">
+                    <div class="measurement">
+                        X : <div class="x" id="x"></div>
+                    </div>
+                    <div class="measurement">
+                        Y : <div class="y" id="y"></div>
+                    </div>
+                    <div class="measurement">
+                        Z : <div class="z" id="z"></div>
+                    </div>                    
+            </div>
+        </div>
+        <div class="state-3" id="state-3">
+            <div class="log">
+
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
