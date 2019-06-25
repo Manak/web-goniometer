@@ -41,9 +41,6 @@ window.onload = () => {
             return;
         }
         if(state == 2){
-            lastX = xRotation+0;
-            lastY = yRotation+0;
-            lastZ = zRotation+0;
             logs.push({
                 xRotation:xRotation,
                 yRotation:yRotation,
@@ -55,6 +52,9 @@ window.onload = () => {
                 yZero: yZero,
                 zZero: zZero,  
             });
+            lastX = xRotation+0;
+            lastY = yRotation+0;
+            lastZ = zRotation+0;
             document.body.style.background = "#bfff8e";
             setTimeout(() => {
                 document.body.style.background="#eee";
